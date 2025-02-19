@@ -136,26 +136,35 @@ body {
     width: 20%; 
 }
 
+@keyframes flip {
+    0% {
+        transform: rotateX(0);
+    }
+    50% {
+        transform: rotateX(-90deg);
+    }
+    100% {
+        transform: rotateX(0);
+    }
+}
+
 .time span:first-child {
-    font-size: clamp(1.5rem, 2.5vw, 2.5rem); 
+    font-size: clamp(1.5rem, 2.5vw, 2.5rem);
     font-weight: bold;
     color: blueviolet;
     text-shadow: 1px 1px blueviolet;
-    animation: bounce 2s infinite;
+    display: inline-block;
 }
+
+.flip {
+    animation: flip 0.5s ease-in-out;
+}
+
 
 .time span:last-child {
     font-size: clamp(0.9rem, 1.2vw, 1.2rem); 
     font-weight: 500;
 }
 
-/* Bounce Animation */
-@keyframes bounce {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-5px);
-    }
-}
+
 
