@@ -12,7 +12,7 @@ body {
     width: 100dvw;
     display: flex;
     justify-content: center;
-    align-items: center; /* Centered the content */
+    align-items: center; 
     background-color: #f4f4f4;
 }
 
@@ -51,10 +51,10 @@ body {
     align-items: center;
     justify-content: center;
     width: 100%;
-    margin-top: clamp(25vh, 12vh, 18vh); /* Adjusted so text is not hidden */
+    margin-top: clamp(19vh, 12vh, 18vh); 
     gap: 20px;
     position: relative;
-    z-index: 2; /* Ensuring it appears above the background */
+    z-index: 2;
 }
 
 .name {
@@ -62,7 +62,7 @@ body {
     font-weight: 700;
     color: blueviolet;
     font-family: "Dancing Script", cursive;
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2); /* Added shadow for visibility */
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2); 
     white-space: nowrap;
 }
 
@@ -145,7 +145,7 @@ body {
 }
 
 .time span:last-child {
-    font-size: clamp(0.9rem, 1.2vw, 1.2rem); /* Labels stay readable */
+    font-size: clamp(0.9rem, 1.2vw, 1.2rem); 
     font-weight: 500;
 }
 
