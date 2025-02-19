@@ -114,7 +114,7 @@ body {
 
 
 .countdown-container {
-    background: #f4f4f4;
+    background: linear-gradient(to right, rgba(141, 54, 221, 0.15), rgba(255, 255, 255, 0.6)); 
     padding: 1.2rem;
     margin-top: 1rem;
     border-radius: 15px;
@@ -231,7 +231,7 @@ body {
 
 
 .date-container > div {
-    background-color: white;
+    background: linear-gradient(to right, rgba(141, 54, 221, 0.15), rgba(255, 255, 255, 0.6)); 
     padding: 2vw;
     text-align: center;
     font-size: clamp(0.9rem, 2vw, 1.5rem);
@@ -253,17 +253,6 @@ body {
     margin-bottom: 1vh;
     text-transform: uppercase;
 }
-
-.date-container .event::after {
-    content: "";
-    display: block;
-    width: 5vw;
-    height: 1px;
-    background-color: #f4f4f4;
-    margin: 0.1vh auto;
-    border-radius: 1px;
-}
-
 
 .timings h6 {
     font-size: clamp(0.7rem, 2vw, 1.2rem);
@@ -295,7 +284,7 @@ body {
     content: "🕒";
 }
 
-/* Mobile Optimization */
+
 @media (max-width: 768px) {
     .date-container {
         gap: 2vw; 
@@ -320,4 +309,3 @@ body {
         max-width: 150px; 
     }
 }
-
