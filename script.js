@@ -35,3 +35,31 @@ function updateTime(id, newValue) {
 
 const countdownInterval = setInterval(updateCountdown, 1000);
 updateCountdown();
+document.addEventListener("DOMContentLoaded", function () {
+    function createFloatingHearts(containerSelector) {
+        const section = document.querySelector(containerSelector);
+        if (!section) return;
+
+        const heartContainer = document.createElement("div");
+        heartContainer.classList.add("heart-container");
+        section.appendChild(heartContainer);
+
+        for (let i = 0; i < 20; i++) { 
+            let heart = document.createElement("div");
+            heart.classList.add("heart");
+            heart.innerHTML = "💜"; 
+            
+            let size = Math.random() * 2 + 1; 
+            let leftPosition = Math.random() * 100; 
+            let duration = Math.random() * 5 + 3; 
+            
+            heart.style.left = `${leftPosition}%`;
+            heart.style.fontSize = `${size}vw`;
+            heart.style.animationDuration = `${duration}s`;
+            heartContainer.appendChild(heart);
+        }
+    }
+    createFloatingHearts("#venue");
+    createFloatingHearts(".picture");
+});
+
