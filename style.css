@@ -13,7 +13,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center; 
-    background-color: #f4f4f4;
+    background-color:#f4f4f4;
+    color: blueviolet;
+    flex-direction: column;
+    height: auto;
 }
 
 .picture {
@@ -21,7 +24,8 @@ body {
     flex-direction: column;
     align-items: center;
     margin: 2%;
-    max-width: 800px;
+    height: auto;
+    max-width: 900px;
     width: 100%;
     background: white;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
@@ -60,6 +64,7 @@ body {
 .name {
     font-size: clamp(1.3rem, 2vw, 3rem);
     font-weight: 900;
+    margin-top: 11vh;
     color: blueviolet;
     font-family: "Tangerine", cursive;
     text-shadow: 1px 1px 5px blueviolet;
@@ -113,7 +118,7 @@ body {
 .countdown-container {
     background: #f4f4f4;
     padding: 1.2rem;
-    margin-top: 1.5rem;
+    margin-top: 1rem;
     border-radius: 15px;
     border: 2px solid blueviolet;
     color: blueviolet;
@@ -167,5 +172,118 @@ body {
     font-weight: 500;
 }
 
+#venue {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background: white;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    padding: 3vw;
+    overflow: hidden;
+    max-width: 900px;
+}
 
+
+.date-container {
+    display: flex;
+    gap: 6vw; 
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: nowrap;
+}
+
+
+.date-container > div {
+    background-color: white;
+    padding: 2vw;
+    text-align: center;
+    font-size: clamp(0.9rem, 2vw, 1.5rem);
+    border-radius: 15px;
+    color: blueviolet;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    font-weight: 700;
+    position: relative;
+    border: 2px solid blueviolet;
+    width: 30%;
+    min-width: 200px;
+    max-width: 400px;
+}
+
+.date-container .event {
+    font-size: clamp(0.9rem, 3vw, 2rem);
+    font-weight: bold;
+    color: blueviolet;
+    margin-bottom: 1vh;
+    text-transform: uppercase;
+}
+
+.date-container .event::after {
+    content: "";
+    display: block;
+    width: 5vw;
+    height: 1px;
+    background-color: #f4f4f4;
+    margin: 0.1vh auto;
+    border-radius: 1px;
+}
+
+
+.timings h6 {
+    font-size: clamp(0.7rem, 2vw, 1.2rem);
+    font-weight: 600;
+    color: blueviolet;
+    padding: 1vh 2vw;
+    border-radius: 25px;
+    background: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    margin: 1vh 0;
+    border: 1px solid rgba(138, 43, 226, 0.3);
+    white-space: nowrap;
+}
+
+
+.timings h6:first-child {
+    display: flex;
+    justify-content: center;
+}
+
+.timings h6:first-child::before {
+    content: "📅";
+}
+
+.timings h6:last-child::before {
+    content: "🕒";
+}
+
+/* Mobile Optimization */
+@media (max-width: 768px) {
+    .date-container {
+        gap: 2vw; 
+    }
+
+    .date-container > div {
+        width: 80%; 
+        min-width: 150px; 
+        max-width: 200px; 
+    }
+}
+
+
+@media (max-width: 480px) {
+    .date-container {
+        gap: 6vw;
+    }
+
+    .date-container > div {
+        width: 45%;
+        min-width: 120px; 
+        max-width: 150px; 
+    }
+}
 
