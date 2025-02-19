@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    width: 100dvw;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centered the content */
+    background-color: #f4f4f4;
+}
+
+.picture {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2%;
+    max-width: 800px;
+    width: 100%;
+    background: white;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    padding: 3%;
+    position: relative;
+    overflow: hidden;
+}
+
+.picture::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 40%;
+    width: 100%;
+    background: url('./assets/ring.jpg') no-repeat center center;
+    background-size: cover;
+    z-index: 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    box-sizing: border-box;
+}
+
+.name-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: clamp(25vh, 12vh, 18vh); /* Adjusted so text is not hidden */
+    gap: 20px;
+    position: relative;
+    z-index: 2; /* Ensuring it appears above the background */
+}
+
+.name {
+    font-size: clamp(1rem, 2.5vw, 3rem);
+    font-weight: 700;
+    color: blueviolet;
+    font-family: "Dancing Script", cursive;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2); /* Added shadow for visibility */
+    white-space: nowrap;
+}
+
+
+.image {
+    position: relative;
+    height: 140px;
+    width: 140px;
+    border-radius: 50%;
+    background-color: blueviolet;
+    padding: 3px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image .profile-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #fff;
+}
+
+.picture .quotes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.quotes .bound {
+    font-size: clamp(1rem, 1.5vw, 2rem);
+    font-weight: 700;
+    color: blueviolet;
+}
+
+.quotes .joinus {
+    font-size: clamp(0.9rem, 1.4vw, 2rem);
+    font-weight: 500;
+    color: blueviolet;
+}
+
+
+.countdown-container {
+    background: #f4f4f4;
+    padding: 1.2rem;
+    margin-top: 1.5rem;
+    border-radius: 15px;
+    border: 2px solid blueviolet;
+    color: blueviolet;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+    width: 90%;
+    max-width: 450px;
+}
+
+.countdown {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.time {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20%; 
+}
+
+.time span:first-child {
+    font-size: clamp(1.5rem, 2.5vw, 2.5rem); 
+    font-weight: bold;
+    color: blueviolet;
+    text-shadow: 1px 1px blueviolet;
+    animation: bounce 2s infinite;
+}
+
+.time span:last-child {
+    font-size: clamp(0.9rem, 1.2vw, 1.2rem); /* Labels stay readable */
+    font-weight: 500;
+}
+
+/* Bounce Animation */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
