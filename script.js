@@ -16,7 +16,7 @@ function updateCountdown() {
 
   if (timeLeft < 0) {
     clearInterval(countdownInterval);
-    document.querySelector(".countdown").innerHTML = "<h2>Happy Journey !</h2>";
+    document.querySelector(".countdown").innerHTML = "<h2>Journey Begins!</h2>";
   }
 }
 
@@ -35,6 +35,7 @@ function updateTime(id, newValue) {
 
 const countdownInterval = setInterval(updateCountdown, 1000);
 updateCountdown();
+
 document.addEventListener("DOMContentLoaded", function () {
     function createFloatingHearts(containerSelector) {
         const section = document.querySelector(containerSelector);
@@ -59,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
             heartContainer.appendChild(heart);
         }
     }
+    createFloatingHearts("#profile");
     createFloatingHearts("#venue");
-    createFloatingHearts(".picture");
+    createFloatingHearts("#address")
 });
-
