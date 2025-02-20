@@ -63,7 +63,9 @@ document.addEventListener("DOMContentLoaded", function () {
     createFloatingHearts("#profile");
     createFloatingHearts("#venue");
     createFloatingHearts("#address");
-    createFloatingHearts('#photo')
+    createFloatingHearts('#photo');
+    createFloatingHearts('#contact');
+    createFloatingHearts('.qrcontent h6 ')
 });
 let currentIndex = 0;
 const slides = document.querySelectorAll(".slide");
