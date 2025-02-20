@@ -22,7 +22,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 1%;
     max-width: 900px;
     width: 100%;
     background: linear-gradient(to right, rgba(138, 43, 226, 0.15), rgba(255, 255, 255, 0.6)); 
@@ -60,7 +59,7 @@ body {
 }
 
 .name {
-    font-size: clamp(1.3rem, 2vw, 3rem);
+    font-size: clamp(1.4rem, 2vw, 3rem);
     font-weight: 900;
     margin-top: 10vh;
     color: blueviolet;
@@ -264,27 +263,54 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    
     gap: 6px;
     margin: 1vh 0;
     border: 1px solid rgba(138, 43, 226, 0.3);
     white-space: nowrap;
 }
-
-
-.timings h6:first-child {
+#address{
+    position: relative;
     display: flex;
     justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 900px;
+    background: linear-gradient(to right, rgba(138, 43, 226, 0.15), rgba(255, 255, 255, 0.6)); 
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    padding: 3vw;
+    overflow: hidden;
 }
 
-.timings h6:first-child::before {
-    content: "🗓️";
+.address-container > div{
+    background: linear-gradient(to right, rgba(141, 54, 221, 0.15), rgba(255, 255, 255, 0.6)); 
+    padding: 2vw;
+    text-align: center;
+    font-size: clamp(1.5rem, 2vw, 1.5rem);
+    border-radius: 15px;
+    color: blueviolet;
+    flex-direction: column;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    font-weight: 700;
+    position: relative;
+    text-transform: uppercase;
+    border: 2px solid blueviolet;
+    width: 30%;
+    min-width: 300px;
+    max-width: 400px;
 }
-
-.timings h6:last-child::before {
-    content: "🕒";
+.address h6{
+    font-size: clamp(0.8rem, 2vw, 1.2rem);
+    font-weight: 600;
+    color: blueviolet;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    margin: 0.1vh 0;
+    white-space: nowrap;
 }
-
-
 @media (max-width: 768px) {
     .date-container {
         gap: 2vw; 
