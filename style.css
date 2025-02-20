@@ -277,7 +277,7 @@ body {
 }
 
 .timings h6:first-child::before {
-    content: "📅";
+    content: "🗓️";
 }
 
 .timings h6:last-child::before {
